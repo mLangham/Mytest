@@ -1,7 +1,52 @@
 This is a git repo setup on Linux
 
 
+Create local repository
 git init Mytest
-
 cd Mytest
+
+
+Create README and sample.c file
+subl README
+<created sample.c using File->New, File->Save As>
+
+
+Add file to the Index. Index stores files/folders that are to be added into the Git repository.
+git add README
+git add sample.c
+
+
+Once all the files have been added to the Index, we can commit them to the repository.
+git commit -m "some_message"
+
+
+Create new repository on GitHub via web interface,
+…or create a new repository on the command line:
+*** From GitHub ***
+echo "# Mytest" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mLangham/Mytest.git
+git push -u origin main
+
+
+Connect to GitHub repository
+git remote add origin https://github.com/mLangham/Mytest.git
+
+
+Push files from local repository into the remote host repository (GitHub)
+
+git commit -m "initial commit"
+git push origin master
+
+
+*** From GitHub ***
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/mLangham/Mytest.git
+git branch -M main
+git push -u origin main
+
 
